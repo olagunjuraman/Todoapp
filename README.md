@@ -13,12 +13,12 @@ Create a .env file in then root and add the following
   
 # Install Dependencies (frontend & backend)
 npm install
-cd frontend npm install
+cd frontend 
+npm install
 
 
 
   
- Run
 # Run frontend (:3000) & backend (:7000)
 npm run dev
 

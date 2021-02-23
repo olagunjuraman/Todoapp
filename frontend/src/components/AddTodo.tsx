@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IonInput, IonLabel, IonCheckbox } from "@ionic/react";
+import { IonInput, IonLabel, IonCheckbox, IonButton } from "@ionic/react";
 
 interface AddTodoProps {
   onAdd: (todo: mytodo) => any;
@@ -70,7 +70,9 @@ const AddTodo: React.FC<AddTodoProps> = ({ onAdd }) => {
         />
       </div>
 
-      <input type="submit" value=" Add Todo" className="btn btn-block" />
+      <IonButton type="submit" expand="block" className="btn">
+        Add Todo
+      </IonButton>
     </form>
   );
 };

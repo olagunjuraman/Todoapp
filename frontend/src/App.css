@@ -9,13 +9,13 @@ body {
 }
 
 .container {
-  max-width: 500px;
-  margin: 30px auto;
-  overflow: auto;
-  min-height: 300px;
-  border: 1px solid steelblue;
-  padding: 30px;
-  border-radius: 5px;
+  --max-width: 500px;
+  --margin: 30px auto;
+  --overflow: auto;
+  --min-height: 300px;
+  --border: 1px solid steelblue;
+  --padding: 30px;
+  --border-radius: 5px;
 }
 
 .header {
@@ -40,7 +40,7 @@ body {
 }
 
 .btn:focus {
-  outline: none;
+  --outline: none;
 }
 
 .btn:active {
@@ -53,10 +53,10 @@ body {
 }
 
 .task {
-  background: #f4f4f4;
-  margin: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
+  --background: #f4f4f4;
+  --margin: 5px;
+  --padding: 10px 20px;
+  --cursor: pointer;
 }
 
 .task.reminder {
@@ -64,13 +64,13 @@ body {
 }
 
 .task h3 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  --display: flex;
+  --align-items: center;
+  --justify-content: space-between;
 }
 
 .add-form {
-  margin-bottom: 40px;
+  --margin-bottom: 40px;
 }
 
 .form-control {
@@ -82,17 +82,17 @@ body {
 }
 
 .form-control input {
-  width: 100%;
-  height: 40px;
-  margin: 5px;
-  padding: 3px 7px;
-  font-size: 17px;
+  --width: 100%;
+  --height: 40px;
+  --margin: 5px;
+  --padding: 3px 7px;
+  --font-size: 17px;
 }
 
 .form-control-check {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  --display: flex;
+  --align-items: center;
+  --justify-content: space-between;
 }
 
 .form-control-check label {

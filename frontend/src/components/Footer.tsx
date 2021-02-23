@@ -1,11 +1,13 @@
-import { IonFooter } from "@ionic/react";
+import { IonFooter, IonToolbar } from "@ionic/react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <IonFooter>
-      <p>Copyright &copy; 2021</p>
-      <Link to="/about">About</Link>
+      <IonToolbar>
+        <p>Copyright &copy; 2021</p>
+        <Link to="/about">About</Link>
+      </IonToolbar>
     </IonFooter>
   );
 };

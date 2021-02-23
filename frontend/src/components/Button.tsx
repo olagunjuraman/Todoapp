@@ -8,6 +8,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ color, text, onClick }) => {
   return (
     <IonButton
+      color={color}
       className="btn"
       onClick={onClick}
       style={{ backgroundColor: color }}

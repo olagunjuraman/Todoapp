@@ -1,3 +1,4 @@
+import { IonButton } from "@ionic/react";
 interface ButtonProps {
   onClick: () => void;
   color: string;
@@ -6,14 +7,14 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ color, text, onClick }) => {
   return (
-    <button
+    <IonButton
       className="btn"
       onClick={onClick}
       style={{ backgroundColor: color }}
     >
       {" "}
       {text}
-    </button>
+    </IonButton>
   );
 };
 

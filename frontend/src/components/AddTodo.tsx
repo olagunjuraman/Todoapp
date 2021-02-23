@@ -1,17 +1,5 @@
 import { useState } from "react";
-import {
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-  IonInput,
-  IonItem,
-  IonLabel,
-  IonList,
-  IonItemDivider,
-  IonCheckbox,
-} from "@ionic/react";
+import { IonInput, IonLabel, IonCheckbox } from "@ionic/react";
 
 interface AddTodoProps {
   onAdd: (todo: mytodo) => any;

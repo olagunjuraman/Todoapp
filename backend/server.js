@@ -2,6 +2,9 @@ const Hapi = require("@hapi/hapi");
 
 const todoRoutes = require("./routes/todoRoutes");
 
+const Path = require("path");
+const Inert = require("@hapi/inert");
+
 const dotenv = require("dotenv");
 
 dotenv.config();
@@ -10,21 +13,33 @@ const connectDB = require("./config/db");
 
 connectDB();
 
+const __dirnam = Path.resolve();
+
 const init = async () => {
   const server = Hapi.server({
     port: process.env.PORT,
     host: "localhost",
-  });
-
-  server.route({
-    path: "/",
-    method: "GET",
-    handler(req, reply) {
-      reply("Welcome to HapiJs course!!");
+    routes: {
+      files: {
+        relativeTo: Path.join(__dirnam, "/frontend/build"),
+      },
     },
   });
 
+  await server.register(Inert);
+
   server.route(todoRoutes);
+
+  server.route({
+    method: "GET",
+    path: "/{param*}",
+    handler: {
+      directory: {
+        path: ".",
+        redirectToSlash: true,
+      },
+    },
+  });
 
   await server.start();
   console.log("Server running on %s", server.info.uri);

@@ -17,8 +17,8 @@ const __dirnam = Path.resolve();
 
 const init = async () => {
   const server = Hapi.server({
-    port: process.env.PORT || 5000,
-    host: "0.0.0.0",
+    port: process.env.PORT,
+    host: "localhost",
     routes: {
       files: {
         relativeTo: Path.join(__dirnam, "/frontend/build"),

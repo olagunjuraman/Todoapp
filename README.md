@@ -11,14 +11,14 @@ Create a .env file in then root and add the following
   MONGO_URI = your mongodb uri
   
   
-Install Dependencies (frontend & backend)
+# Install Dependencies (frontend & backend)
 npm install
-cd frontend
+cd frontend 
 npm install
+
 
 
   
- Run
 # Run frontend (:3000) & backend (:7000)
 npm run dev
 

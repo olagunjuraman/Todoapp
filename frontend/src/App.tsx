@@ -122,13 +122,7 @@ const App: React.FC = () => {
   };
 
   return (
-    // <div className="container">
-    //   <Header title={" My Todo List"} onShowTask={showTask} />
-
-    //   {showAddTask && <AddTodo onAdd={addTodo} />}
-    //   <Todos todos={todos} onDelete={deleteTodo} onToggle={toggleReminder} />
-    // </div>
-
+   
     <Router>
     <div className='container'>
       <Header

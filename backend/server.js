@@ -17,7 +17,7 @@ const __dirnam = Path.resolve();
 
 const init = async () => {
   const server = Hapi.server({
-    port: process.env.PORT,
+    port: process.env.PORT || 5000,
     host: "localhost",
     routes: {
       files: {
